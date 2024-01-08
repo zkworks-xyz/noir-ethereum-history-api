@@ -1,5 +1,5 @@
 import { createDefaultClient } from '../ethereum/client.js';
-import { writeFile } from 'fs/promises'
+import { writeFile } from 'fs/promises';
 import { stringify } from 'json-bigint';
 
 const filePath = './result.json';
@@ -16,7 +16,7 @@ const blocks = [
   15000000n,
   16000000n,
   17000000n,
-  18869415n
+  18869415n,
 ];
 
 const client = createDefaultClient();
@@ -31,5 +31,3 @@ for (let blockNumber of blocks) {
 
 await writeFile(filePath, stringify(result));
 console.log(`File has been saved: ${filePath}`);
-
-

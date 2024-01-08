@@ -5,7 +5,6 @@ import { BlockHeader, calculateBlockHash, calculateBlockHeaderHash, headerToRlp 
 import { blockHeaders } from './fixtures/blockHeader.json';
 
 for (let header of blockHeaders) {
-
   describe('encodeBlockHeader', () => {
     it(header.title, () => {
       expect(headerToRlp(header.header as BlockHeader)).toBe(header.rlp);
@@ -24,6 +23,6 @@ describe('calculateBlockHash', async () => {
   for (let block of blocks) {
     it(`block #${block.number}`, async () => {
       expect(calculateBlockHash(block)).toBe(block.hash);
-    })
+    });
   }
 });

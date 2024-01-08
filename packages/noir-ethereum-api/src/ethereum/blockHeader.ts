@@ -29,14 +29,14 @@ export function headerToRlp(blockHeader: BlockHeader) {
     blockHeader.transactionsRoot,
     blockHeader.receiptsRoot,
     blockHeader.logsBloom,
-    blockHeader.difficulty === "0x0" ? "0x" : blockHeader.difficulty,
+    blockHeader.difficulty === '0x0' ? '0x' : blockHeader.difficulty,
     blockHeader.number,
     blockHeader.gasLimit,
-    blockHeader.gasUsed === "0x0" ? "0x" : blockHeader.gasUsed,
+    blockHeader.gasUsed === '0x0' ? '0x' : blockHeader.gasUsed,
     blockHeader.timestamp,
     blockHeader.extraData,
     blockHeader.mixHash,
-    blockHeader.nonce
+    blockHeader.nonce,
   ];
   if (blockHeader.baseFeePerGas) {
     header.push(blockHeader.baseFeePerGas);
@@ -51,7 +51,7 @@ export function toHexString(arg: number | bigint) {
   return `0x${arg.toString(16)}`;
 }
 
-export function blockToHeader(block: GetBlockReturnType) : BlockHeader {
+export function blockToHeader(block: GetBlockReturnType): BlockHeader {
   return {
     parentHash: block.parentHash,
     sha3Uncles: block.sha3Uncles,
@@ -73,10 +73,10 @@ export function blockToHeader(block: GetBlockReturnType) : BlockHeader {
   } as BlockHeader;
 }
 
-export function calculateBlockHeaderHash(blockHeader: BlockHeader) : Hex {
+export function calculateBlockHeaderHash(blockHeader: BlockHeader): Hex {
   return keccak256(hexToBytes(headerToRlp(blockHeader)));
 }
 
-export function calculateBlockHash(block: GetBlockReturnType) : Hex {
+export function calculateBlockHash(block: GetBlockReturnType): Hex {
   return calculateBlockHeaderHash(blockToHeader(block));
 }
