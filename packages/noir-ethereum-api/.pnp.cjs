@@ -32,6 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.10.5"],\
           ["dotenv", "npm:16.3.1"],\
           ["json-bigint", "npm:1.0.0"],\
+          ["prettier", "npm:3.1.1"],\
           ["rollup-plugin-copy", "npm:3.5.0"],\
           ["tsx", "npm:4.7.0"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -2314,6 +2315,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.10.5"],\
           ["dotenv", "npm:16.3.1"],\
           ["json-bigint", "npm:1.0.0"],\
+          ["prettier", "npm:3.1.1"],\
           ["rollup-plugin-copy", "npm:3.5.0"],\
           ["tsx", "npm:4.7.0"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -2485,6 +2487,15 @@ const RAW_RUNTIME_STATE =
           ["nanoid", "npm:3.3.7"],\
           ["picocolors", "npm:1.0.0"],\
           ["source-map-js", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["prettier", [\
+      ["npm:3.1.1", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.1.1-072c31ec21/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\

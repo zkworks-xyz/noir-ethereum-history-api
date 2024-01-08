@@ -2149,6 +2149,7 @@ __metadata:
     "@types/node": "npm:^20.10.5"
     dotenv: "npm:^16.3.1"
     json-bigint: "npm:^1.0.0"
+    prettier: "npm:^3.1.1"
     rollup-plugin-copy: "npm:^3.5.0"
     tsx: "npm:^4.7.0"
     typescript: "npm:^5.3.3"
@@ -2299,6 +2300,15 @@ __metadata:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
   checksum: 28084864122f29148e1f632261c408444f5ead0e0b9ea9bd9729d0468818ebe73fe5dc0075acd50c1365dbe639b46a79cba27d355ec857723a24bc9af0f18525
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "prettier@npm:3.1.1"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 26a249f321b97d26c04483f1bf2eeb22e082a76f4222a2c922bebdc60111691aad4ec3979610e83942e0b956058ec361d9e9c81c185172264eb6db9aa678082b
   languageName: node
   linkType: hard
 
