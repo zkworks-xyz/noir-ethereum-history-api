@@ -26,6 +26,7 @@
     "viem": "^2.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.5.0",
     "@types/eslint": "^8",
     "@types/json-bigint": "^1",
     "@types/node": "^20.10.5",
