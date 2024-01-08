@@ -1,23 +1,23 @@
 import { type GetBlockReturnType, type Hex, hexToBytes, hexToRlp, keccak256 } from 'viem';
 
 export interface BlockHeader {
-  parentHash: Hex
-  sha3Uncles: Hex
-  miner: Hex
-  stateRoot: Hex
-  transactionsRoot: Hex
-  receiptsRoot: Hex
-  logsBloom: Hex
-  difficulty: Hex
-  number: Hex
-  gasLimit: Hex
-  gasUsed: Hex
-  timestamp: Hex
-  extraData: Hex
-  mixHash: Hex
-  nonce: Hex
-  baseFeePerGas?: Hex
-  withdrawalsRoot?: Hex
+  parentHash: Hex;
+  sha3Uncles: Hex;
+  miner: Hex;
+  stateRoot: Hex;
+  transactionsRoot: Hex;
+  receiptsRoot: Hex;
+  logsBloom: Hex;
+  difficulty: Hex;
+  number: Hex;
+  gasLimit: Hex;
+  gasUsed: Hex;
+  timestamp: Hex;
+  extraData: Hex;
+  mixHash: Hex;
+  nonce: Hex;
+  baseFeePerGas?: Hex;
+  withdrawalsRoot?: Hex;
 }
 
 export function headerToRlp(blockHeader: BlockHeader): Hex {
@@ -36,7 +36,7 @@ export function headerToRlp(blockHeader: BlockHeader): Hex {
     blockHeader.timestamp,
     blockHeader.extraData,
     blockHeader.mixHash,
-    blockHeader.nonce
+    blockHeader.nonce,
   ];
   if (blockHeader.baseFeePerGas !== undefined) {
     header.push(blockHeader.baseFeePerGas);
@@ -69,7 +69,7 @@ export function blockToHeader(block: GetBlockReturnType): BlockHeader {
     mixHash: block.mixHash,
     nonce: block.nonce,
     baseFeePerGas: block.baseFeePerGas !== null ? toHexString(block.baseFeePerGas) : undefined,
-    withdrawalsRoot: block.withdrawalsRoot !== null ? block.withdrawalsRoot : undefined
+    withdrawalsRoot: block.withdrawalsRoot !== null ? block.withdrawalsRoot : undefined,
   };
   return blockHeader;
 }

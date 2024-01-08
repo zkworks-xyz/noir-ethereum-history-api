@@ -1,8 +1,8 @@
 import { type ForeignCallOutput } from '@noir-lang/noir_js';
+import { hexToBytes, keccak256 } from 'viem';
+import { padArray } from '../../arrays.js';
 import { type BlockHeader, headerToRlp } from '../../ethereum/blockHeader.js';
 import { encodeField, encodeHex } from '../encode.js';
-import { padArray } from '../../arrays.js';
-import { hexToBytes, keccak256 } from 'viem';
 
 export const MAX_HEADER_RLP_SIZE = 708;
 

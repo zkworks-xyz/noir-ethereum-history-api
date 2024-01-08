@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
-import copy from 'rollup-plugin-copy';
 import fs from 'fs';
 import path from 'path';
+import copy from 'rollup-plugin-copy';
+import { defineConfig } from 'vite';
 
 const wasmContentTypePlugin = {
   name: 'wasm-content-type-plugin',
@@ -39,12 +39,12 @@ export default defineConfig(({ command }) => {
         entry: 'src/main.js',
         name: 'noir-ethereum-history-api',
         // the proper extensions will be added
-        fileName: (format) => `my-lib.${format}.js`
-      }
+        fileName: (format) => `my-lib.${format}.js`,
+      },
     },
     test: {
       globals: true,
-      exclude: [...configDefaults.exclude, 'dist']
-    }
+      exclude: [...configDefaults.exclude, 'dist'],
+    },
   };
 });

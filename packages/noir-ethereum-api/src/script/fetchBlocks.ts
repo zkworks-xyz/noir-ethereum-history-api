@@ -1,6 +1,6 @@
-import { createDefaultClient } from '../ethereum/client.js';
 import { writeFile } from 'fs/promises';
 import { stringify } from 'json-bigint';
+import { createDefaultClient } from '../ethereum/client.js';
 
 const filePath = './result.json';
 const blocks = [
@@ -16,7 +16,7 @@ const blocks = [
   15000000n,
   16000000n,
   17000000n,
-  18869415n
+  18869415n,
 ];
 
 const client = createDefaultClient();
